@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compound Interest Calculator</title>
+  </head>
+  <body>
+    <form id="ci-calculator">
+      <label for="principal-amount">Principal Amount</label>
+      <input id="principal-amount" type="number" />
+
+      <label for="interest-rate">Annual Interest Rate</label>
+      <input id="interest-rate" type="number" />
+
+      <label for="time">Time(in years)</label>
+      <input id="time" type="number" />
+
+      <select id="compounding">
+        <option value="Daily">Daily</option>
+        <option value="Weekly">Weekly</option>
+        <option value="Monthly">Monthly</option>
+        <option value="Quarterly">Quarterly</option>
+        <option value="Semiannually">Semiannually</option>
+        <option value="Annually" selected="selected">Annually</option>
+        <option value="No Compound">No Compound</option>
+      </select>
+
+      <button id="ci-reset" type="button">Reset</button>
+      <button id="ci-calculate" type="button">Calculate</button>
+
+      <div id="ci-result" hidden>
+        <p><span>Total Principal:   </span><span id="total-principal"></span></p>
+        <p><span>Interest Amount:   </span><span id="interest-amount"></span></p>
+      </div>
+    </form>
+
+
+    <script src="js/ciCalculator.js"></script>
+  </body>
+</html>

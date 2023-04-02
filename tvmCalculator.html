@@ -14,7 +14,7 @@
   </head>
   <body>
     <div class="categories" id="includeHtml"></div>
-    <div class="tvm-calculator">
+    <form id="tvm-calculator">
       <label for="present-value">Present Value</label>
       <input id="present-value" type="number" />
       <button id="present-value-button" type="button">Calculate</button>
@@ -34,6 +34,10 @@
       <label for="future-value">Future Value</label>
       <input id="future-value" type="number" />
       <button id="future-value-button" type="button">Calculate</button>
+    </form>
+
+    <div id="tvm-reset">
+      <button type="button">Reset</button>
     </div>
 
     <script src="js/tvmCalculator.js"></script>

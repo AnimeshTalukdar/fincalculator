@@ -62,3 +62,7 @@ document.getElementById("future-value-button").addEventListener("click", () => {
   console.log(res);
   fv.value = res.toFixed(2);
 });
+
+document.getElementById("tvm-reset").addEventListener("click", () => {
+  document.getElementById("tvm-calculator").reset();
+})
