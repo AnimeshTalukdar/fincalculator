@@ -14,30 +14,33 @@
   </head>
   <body>
     <div class="categories" id="includeHtml"></div>
-    <form id="tvm-calculator">
-      <label for="present-value">Present Value</label>
-      <input id="present-value" type="number" />
-      <button id="present-value-button" type="button">Calculate</button>
+    <div>
+      <h1 class="heading">Time Value of Money Calculator</h1>
+      <form id="tvm-calculator">
+        <label for="present-value">Present Value</label>
+        <input id="present-value" type="number" />
+        <button id="present-value-button" type="button">Calculate</button>
 
-      <label for="interest-rate">Interest Rate</label>
-      <input id="interest-rate" type="number" />
-      <button id="interest-rate-button" type="button">Calculate</button>
+        <label for="interest-rate">Interest Rate</label>
+        <input id="interest-rate" type="number" />
+        <button id="interest-rate-button" type="button">Calculate</button>
 
-      <label for="compounding-period">Compounding Periods per Year</label>
-      <input id="compounding-period" type="number" />
-      <!-- <button id="compounding-period-button" type="button">Calculate</button> -->
+        <label for="compounding-period">Compounding Periods per Year</label>
+        <input id="compounding-period" type="number" />
+        <!-- <button id="compounding-period-button" type="button">Calculate</button> -->
 
-      <label for="years">Years</label>
-      <input id="years" type="number" />
-      <button id="years-button" type="button">Calculate</button>
+        <label for="years">Years</label>
+        <input id="years" type="number" />
+        <button id="years-button" type="button">Calculate</button>
 
-      <label for="future-value">Future Value</label>
-      <input id="future-value" type="number" />
-      <button id="future-value-button" type="button">Calculate</button>
-    </form>
+        <label for="future-value">Future Value</label>
+        <input id="future-value" type="number" />
+        <button id="future-value-button" type="button">Calculate</button>
+      </form>
 
-    <div id="tvm-reset">
-      <button type="button">Reset</button>
+      <div id="tvm-reset">
+        <button type="button">Reset</button>
+      </div>
     </div>
 
     <script src="js/tvmCalculator.js"></script>

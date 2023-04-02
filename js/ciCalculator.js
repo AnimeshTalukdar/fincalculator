@@ -3,8 +3,10 @@ document.getElementById("ci-calculate").addEventListener("click", () => {
   let ir = document.getElementById("interest-rate").value;
   let t = document.getElementById("time").value;
   let compounding = document.getElementById("compounding").value;
+
   let interestAmount;
   let totalPrincipal;
+
   if (compounding === "No Compound") {
     interestAmount = (pa * ir * t) / 100;
     totalPrincipal = interestAmount + totalPrincipal;
@@ -16,15 +18,18 @@ document.getElementById("ci-calculate").addEventListener("click", () => {
     if (compounding === "Quarterly") n = 4;
     if (compounding === "Semiannually") n = 2;
     if (compounding === "Annually") n = 1;
+
     totalPrincipal = pa * Math.pow(1 + ir / (100 * n), n * t);
     interestAmount = totalPrincipal - pa;
+
     totalPrincipal = totalPrincipal.toFixed(2);
     interestAmount = interestAmount.toFixed(2);
   }
+
   document.getElementById("total-principal").innerHTML = totalPrincipal;
   document.getElementById("interest-amount").innerHTML = interestAmount;
   document.getElementById("ci-result").removeAttribute("hidden");
-  console.log("interestAmount");
+  // console.log(interestAmount);
 });
 
 document.getElementById("ci-reset").addEventListener("click", () => {
