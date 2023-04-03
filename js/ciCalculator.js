@@ -1,7 +1,7 @@
 document.getElementById("ci-calculate").addEventListener("click", () => {
-  let pa = document.getElementById("principal-amount").value;
-  let ir = document.getElementById("interest-rate").value;
-  let t = document.getElementById("time").value;
+  let pa = +document.getElementById("principal-amount").value;
+  let ir = +document.getElementById("interest-rate").value;
+  let t = +document.getElementById("time").value;
   let compounding = document.getElementById("compounding").value;
 
   let interestAmount;
@@ -21,13 +21,12 @@ document.getElementById("ci-calculate").addEventListener("click", () => {
 
     totalPrincipal = pa * Math.pow(1 + ir / (100 * n), n * t);
     interestAmount = totalPrincipal - pa;
-
-    totalPrincipal = totalPrincipal.toFixed(2);
-    interestAmount = interestAmount.toFixed(2);
   }
 
-  document.getElementById("total-principal").innerHTML = totalPrincipal;
-  document.getElementById("interest-amount").innerHTML = interestAmount;
+  document.getElementById("total-principal").innerHTML =
+    totalPrincipal.toFixed(2);
+  document.getElementById("interest-amount").innerHTML =
+    interestAmount.toFixed(2);
   document.getElementById("ci-result").removeAttribute("hidden");
   // console.log(interestAmount);
 });

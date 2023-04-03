@@ -1,11 +1,11 @@
 document
   .getElementById("present-value-button")
   .addEventListener("click", () => {
-    let pv = document.getElementById("present-value");
-    let ir = document.getElementById("interest-rate").value;
-    let cp = document.getElementById("compounding-period").value;
-    let y = document.getElementById("years").value;
-    let fv = document.getElementById("future-value").value;
+    let pv = +document.getElementById("present-value");
+    let ir = +document.getElementById("interest-rate").value;
+    let cp = +document.getElementById("compounding-period").value;
+    let y = +document.getElementById("years").value;
+    let fv = +document.getElementById("future-value").value;
 
     let x = Math.pow(1 + ir / (cp * 100), cp * y);
     let res = fv / x;

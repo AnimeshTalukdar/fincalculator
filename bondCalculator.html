@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#includeHtml").load("categories.html");
+      });
+    </script>
+    <title>Bond Calculator</title>
+  </head>
+  <body>
+    <div class="categories" id="includeHtml"></div>
+    <div>
+      <h1 class="heading">Bond Yield Calculator</h1>
+      <form id="bond-calculator">
+        <label for="current-price">Current Price</label>
+        <input type="number" id="current-price" />
+
+        <label for="face-value">Face Value</label>
+        <input type="number" id="face-value" />
+
+        <label for="coupon-rate">Annual Coupon Rate(%)</label>
+        <input type="number" id="coupon-rate" />
+
+        <label for="years-to-maturity">Years to Maturity</label>
+        <input type="number" id="years-to-maturity" />
+
+        <label for="compounding">Compounding</label>
+        <select id="compounding">
+          <option value="Semiannually" selected="selected">Semiannually</option>
+          <option value="Annually">Annually</option>
+        </select>
+
+        <button id="bond-reset" type="button">Reset</button>
+        <button id="bond-calculate" type="button">Calculate</button>
+
+        <div id="bond-result" hidden>
+          <p>
+            <span>Current Yield:&nbsp;&nbsp;</span
+            ><span id="current-yield"></span>
+          </p>
+          <p>
+            <span>Yield to Maturity:&nbsp;&nbsp;</span
+            ><span id="yield-to-maturity"></span>
+          </p>
+        </div>
+      </form>
+    </div>
+
+    <script src="js/bondCalculator.js"></script>
+  </body>
+</html>

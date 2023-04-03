@@ -1,7 +1,7 @@
 document.getElementById("roi-calculate").addEventListener("click", () => {
-  let oi = document.getElementById("original-investment").value;
-  let ir = document.getElementById("investment-return").value;
-  let p = document.getElementById("holding-period").value;
+  let oi = +document.getElementById("original-investment").value;
+  let ir = +document.getElementById("investment-return").value;
+  let p = +document.getElementById("holding-period").value;
 
   let gain;
   let roi;
@@ -15,15 +15,14 @@ document.getElementById("roi-calculate").addEventListener("click", () => {
     gain = ir - oi;
     roi = (gain / oi) * 100;
     annualizedROI = (Math.pow(ir / oi, 1 / p) - 1) * 100;
-    roi = roi.toFixed(2);
-    annualizedROI = annualizedROI.toFixed(2);
   }
 
   document.getElementById("gain").innerHTML = gain;
-  document.getElementById("roi").innerHTML = roi + "%";
-  document.getElementById("annualized-roi").innerHTML = annualizedROI + "%";
+  document.getElementById("roi").innerHTML = roi.toFixed(2) + "%";
+  document.getElementById("annualized-roi").innerHTML =
+    annualizedROI.toFixed(2) + "%";
   document.getElementById("roi-result").removeAttribute("hidden");
-//   console.log(roi);
+  //   console.log(roi);
 });
 
 document.getElementById("roi-reset").addEventListener("click", () => {
