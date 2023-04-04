@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#includeHtml").load("categories.html");
+      });
+    </script>
+    <title>Rule of 72 Calculator</title>
+  </head>
+  <body>
+    <div class="categories" id="includeHtml"></div>
+    <div>
+      <h1 class="heading">Rule of 72 Calculator</h1>
+      <div id="rule-72-calculator">
+        <h3>Calculate Years Required for Principal to Double</h3>
+
+        <label for="annual-interest-rate">Annual Interest Rate (%)</label>
+        <input id="annual-interest-rate" type="number" />
+
+        <button id="ptd-calculate" type="button">Calculate</button>
+
+        <div id="res1">
+          <p>
+            <span>Rule of 72 Estimate:&nbsp;&nbsp;</span
+            ><span id="ptd-rule72"></span>
+          </p>
+          <p>
+            <span>Exact Answer:&nbsp;&nbsp;</span><span id="ptd-exact"></span>
+          </p>
+        </div>
+
+        <hr />
+
+        <h3>Calculate Annual Interest Rate Required for Principal to Double</h3>
+
+        <label for="years-to-double">Years to Double Investment</label>
+        <input id="years-to-double" type="number" />
+
+        <button id="ir-calculate" type="button">Calculate</button>
+
+        <div id="res2">
+          <p>
+            <span>Rule of 72 Estimate:&nbsp;&nbsp;</span
+            ><span id="ir-rule72"></span>
+          </p>
+          <p>
+            <span>Exact Answer:&nbsp;&nbsp;</span><span id="ir-exact"></span>
+          </p>
+        </div>
+
+        <button id="rule72-table" type="button">Rule of 72 Table</button>
+      </div>
+    </div>
+
+    <script src="js/rule72Calculator.js"></script>
+  </body>
+</html>
