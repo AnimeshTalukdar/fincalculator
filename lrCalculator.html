@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#includeHtml").load("categories.html");
+      });
+    </script>
+    <title>Loan Refinance Calculator</title>
+  </head>
+  <body>
+    <div class="categories" id="includeHtml"></div>
+
+    <div>
+      <h1 class="heading">Loan Refinance Calculator</h1>
+      <form id="lr-calculator">
+        <div>
+          <h3>Old Mortgage</h3>
+          <label for="loan-amount">Loan Amount</label>
+          <input type="number" id="loan-amount" />
+
+          <label for="old-interest-rate">Annual Interest Rate (%)</label>
+          <input type="number" id="old-interest-rate" />
+
+          <label for="old-loan-term">Loan Term (in months)</label>
+          <input type="number" id="old-loan-term" />
+
+          <label for="payment-made">Payment Made (months)</label>
+          <input type="number" id="payment-made" />
+        </div>
+
+        <div>
+          <h3>New Mortgage</h3>
+
+          <label for="new-interest-rate">Annual Interest Rate (%)</label>
+          <input type="number" id="new-interest-rate" />
+
+          <label for="new-loan-term">Loan Term (in months)</label>
+          <input type="number" id="new-loan-term" />
+        </div>
+
+        <button id="lr-reset" type="button">Reset</button>
+        <button id="lr-calculate" type="button">Calculate</button>
+      </form>
+
+      <table id="lr-result">
+        <tr>
+          <td>&nbsp;</td>
+          <td>Old Mortgage</td>
+          <td>New Mortgage</td>
+        </tr>
+        <tr>
+          <td>Total Mortgage:</td>
+          <td id="old-total-mortgage"></td>
+          <td id="new-total-mortgage"></td>
+        </tr>
+        <tr>
+          <td>Monthly Payment:</td>
+          <td id="old-monthly-payment"></td>
+          <td id="new-monthly-payment"></td>
+        </tr>
+        <tr>
+          <td>Remaining Interest:</td>
+          <td id="old-remaining-interest"></td>
+          <td id="new-remaining-interest"></td>
+        </tr>
+        <tr>
+          <td>Interest Saved:</td>
+          <td id="interest-saved"></td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="js/lrCalculator.js"></script>
+  </body>
+</html>

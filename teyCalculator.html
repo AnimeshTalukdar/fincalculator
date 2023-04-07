@@ -17,39 +17,42 @@
     <div>
       <h1 class="heading">Tax Equivalent Yield Calculator</h1>
 
-      <h3>Calculate equivalent taxable yield from tax-free yield</h3>
-      <form id="taxable-yield-calculator">
-        <label for="tax-free-yield">Tax-free Yield (%)</label>
-        <input id="tax-free-yield" type="number" />
+      <div>
+        <h3>Calculate equivalent taxable yield from tax-free yield</h3>
+        <form id="taxable-yield-calculator">
+          <label for="tax-free-yield">Tax-free Yield (%)</label>
+          <input id="tax-free-yield" type="number" />
 
-        <label for="income-tax-rate1">Income Tax Rate (%)</label>
-        <input id="income-tax-rate1" type="number" />
+          <label for="income-tax-rate1">Income Tax Rate (%)</label>
+          <input id="income-tax-rate1" type="number" />
 
-        <button type="button" id="calc-taxable-yield">Calculate</button>
+          <button type="button" id="calc-taxable-yield">Calculate</button>
+        </form>
 
         <div id="tey-result">
           <p>
             <span>Taxable Yield (%):&nbsp;&nbsp;</span><span id="res1"></span>
           </p>
         </div>
-      </form>
+      </div>
 
-      <h3>Calculate equivalent tax-free yield from taxable yield</h3>
-      <form id="tax-free-yield-calculator">
-        <label for="taxable-yield">Taxable Yield (%)</label>
-        <input id="taxable-yield" type="number" />
+      <div>
+        <h3>Calculate equivalent tax-free yield from taxable yield</h3>
+        <form id="tax-free-yield-calculator">
+          <label for="taxable-yield">Taxable Yield (%)</label>
+          <input id="taxable-yield" type="number" />
 
-        <label for="income-tax-rate2">Income Tax Rate (%)</label>
-        <input id="income-tax-rate2" type="number" />
+          <label for="income-tax-rate2">Income Tax Rate (%)</label>
+          <input id="income-tax-rate2" type="number" />
 
-        <button type="button" id="calc-tax-free-yield">Calculate</button>
-
+          <button type="button" id="calc-tax-free-yield">Calculate</button>
+        </form>
         <div id="tey-result">
           <p>
             <span>Tax-free Yield (%):&nbsp;&nbsp;</span><span id="res2"></span>
           </p>
         </div>
-      </form>
+      </div>
 
       <button id="tey-reset" type="button">Reset</button>
       <button id="tey-table" type="button">Table</button>

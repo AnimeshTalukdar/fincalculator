@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#includeHtml").load("categories.html");
+      });
+    </script>
+    <title>Loan Calculator</title>
+  </head>
+  <body>
+    <div class="categories" id="includeHtml"></div>
+
+    <div>
+      <h1 class="heading">Loan Calculator</h1>
+      <form id="loan-calculator">
+        <label for="loan-amount">Principal Loan Amount</label>
+        <input type="number" id="loan-amount" />
+
+        <label for="interest-rate">Annual Interest Rate (%)</label>
+        <input type="number" id="interest-rate" />
+
+        <label for="loan-term">Loan Term (in months)</label>
+        <input type="number" id="loan-term" />
+
+        <button id="loan-reset" type="button">Reset</button>
+        <button id="loan-calculate" type="button">Calculate</button>
+      </form>
+
+      <div id="loan-result" hidden>
+        <p>
+          <span>Monthly Payment:&nbsp;&nbsp;</span
+          ><span id="monthly-payment"></span>
+        </p>
+        <p>
+          <span>Total Payment:&nbsp;&nbsp;</span
+          ><span id="total-payment"></span>
+        </p>
+        <p>
+          <span>Total Interest:&nbsp;&nbsp;</span
+          ><span id="total-interest"></span>
+        </p>
+        <p>
+          <span>Annual Payment:&nbsp;&nbsp;</span
+          ><span id="annual-payment"></span>
+        </p>
+      </div>
+    </div>
+
+    <script src="js/loanCalculator.js"></script>
+  </body>
+</html>
