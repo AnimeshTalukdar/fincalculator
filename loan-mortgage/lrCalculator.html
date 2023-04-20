@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Refinance Calculator</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navigation">
+        <h1>NAV BAR</h1>
+      </div>
+      <div class="wrapper">
+        <div class="side"></div>
+        <!--this is the div where the sidebar is imported--->
+        <div class="main">
+          <div class="show">
+            <div class="name">
+              <h1>Loan Refinance Calculator</h1>
+            </div>
+            <div class="left">
+              <div class="inp">
+                <!--it is the input div,put all the input fields(inside form) here-->
+                <form id="lr-calculator">
+                  <div>
+                    <h3>Old Mortgage</h3>
+                    <label for="loan-amount">Loan Amount</label>
+                    <input type="number" id="loan-amount" />
+
+                    <label for="old-interest-rate"
+                      >Annual Interest Rate (%)</label
+                    >
+                    <input type="number" id="old-interest-rate" />
+
+                    <label for="old-loan-term">Loan Term (in months)</label>
+                    <input type="number" id="old-loan-term" />
+
+                    <label for="payment-made">Payment Made (months)</label>
+                    <input type="number" id="payment-made" />
+                  </div>
+
+                  <div>
+                    <h3>New Mortgage</h3>
+
+                    <label for="new-interest-rate"
+                      >Annual Interest Rate (%)</label
+                    >
+                    <input type="number" id="new-interest-rate" />
+
+                    <label for="new-loan-term">Loan Term (in months)</label>
+                    <input type="number" id="new-loan-term" />
+                  </div>
+
+                  <button class="btn" id="lr-reset" type="button">Reset</button>
+                  <button class="btn" id="lr-calculate" type="button">
+                    Calculate
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="right">
+              <div class="out">
+                <table id="lr-result" hidden>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>Old Mortgage</td>
+                    <td>New Mortgage</td>
+                  </tr>
+                  <tr>
+                    <td>Total Mortgage:</td>
+                    <td id="old-total-mortgage"></td>
+                    <td id="new-total-mortgage"></td>
+                  </tr>
+                  <tr>
+                    <td>Monthly Payment:</td>
+                    <td id="old-monthly-payment"></td>
+                    <td id="new-monthly-payment"></td>
+                  </tr>
+                  <tr>
+                    <td>Remaining Interest:</td>
+                    <td id="old-remaining-interest"></td>
+                    <td id="new-remaining-interest"></td>
+                  </tr>
+                  <tr>
+                    <td>Interest Saved:</td>
+                    <td id="interest-saved"></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(".side").load("../sidebar.html", function () {
+        // jQuery code here
+        $(".btnn").click(function () {
+          $(this).toggleClass("click");
+          $(".sidebar").toggleClass("show");
+          $(".main").toggleClass("collapsed");
+        });
+        $(".serv-btn").click(function () {
+          $(this).toggleClass("show1");
+          $(this).next().slideToggle();
+          $(this).find(".second").toggleClass("rotate");
+        });
+        $("nav ul li").click(function () {
+          $(this).addClass("active").siblings().removeClass("active");
+        });
+      });
+    </script>
+
+    <script src="../js/loan-mortgage/lrCalculator.js"></script>
+  </body>
+</html>

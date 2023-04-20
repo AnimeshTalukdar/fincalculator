@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Balance Sheet and Income Statement Analysis</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navigation">
+        <h1>NAV BAR</h1>
+      </div>
+      <div class="wrapper">
+        <div class="side"></div>
+        <!--this is the div where the sidebar is imported--->
+        <div class="main">
+          <div class="show">
+            <div class="name">
+              <h1>Balance Sheet and Income Statement Analysis</h1>
+            </div>
+            <div class="left">
+              <div class="inp">
+                <!--it is the input div,put all the input fields(inside form) here-->
+                <form id="balance-sheet-analyzer">
+                  <label>Asset</label>
+                  <label>Current Assets</label>
+
+                  <label for="cash">Cash</label>
+                  <input type="number" onchange="calc();" id="cash" />
+
+                  <label for="accounts-receivable">Acounts Receivable</label>
+                  <input
+                    type="number"
+                    onchange="calc();"
+                    id="accounts-receivable"
+                  />
+
+                  <label for="inventory">Inventory</label>
+                  <input type="number" onchange="calc();" id="inventory" />
+
+                  <label
+                    for="total-current-assets"
+                    class="auto-calculated-items"
+                    >Total Current Assets</label
+                  >
+                  <input
+                    type="number"
+                    onchange="calc();"
+                    id="total-current-assets"
+                    readonly
+                  />
+
+                  <label>Fixed Assets</label>
+
+                  <label for="plant-property">Plant Property</label>
+                  <input type="number" onchange="calc();" id="plant-property" />
+
+                  <label for="less-accumulated-depreciation"
+                    >Less Accumulated Deception</label
+                  >
+                  <input
+                    type="number"
+                    onchange="calc();"
+                    id="less-accumulated-depreciation"
+                  />
+
+                  <label for="net-fixed-assets" class="auto-calculated-items"
+                    >Net Fixed Assets</label
+                  >
+                  <input
+                    type="number"
+                    onchange="calc();"
+                    id="net-fixed-assets"
+                    readonly
+                  />
+
+                  <label for="total-assets" class="auto-calculated-items"
+                    >Total Assets</label
+                  >
+                  <input
+                    type="number"
+                    onchange="calc();"
+                    id="total-assets"
+                    readonly
+                  />
+
+                  <label>Liabilities and Equity</label>
+                  <label>Current Liabilities</label>
+
+                  <label for="accounts-payable">Accounts Payable</label>
+                  <input
+                    type="number"
+                    onchange="calc();"
+                    id="accounts-payable"
+                  />
+
+                  <label for="notes-payable">Notes Payble</label>
+                  <input type="number" onchange="calc();" id="notes-payable" />
+
+                  <label
+                    for="total-current-liabilities"
+                    class="auto-calculated-items"
+                    >Total Current Liabilities</label
+                  >
+                  <input
+                    type="number"
+                    onchange="calc();"
+                    id="total-current-liabilities"
+                    readonly
+                  />
+
+                  <label for="total-long-term-liabilities"
+                    >Total Long-Term Liabilities</label
+                  >
+                  <input
+                    type="number"
+                    onchange="calc();"
+                    id="total-long-term-liabilities"
+                  />
+
+                  <label>Owners's Equality</label>
+
+                  <label for="common-stock">Common Stock (₹1 par)</label>
+                  <input type="number" onchange="calc();" id="common-stock" />
+
+                  <label for="retained-earnings">Retained Earnings</label>
+                  <input
+                    type="number"
+                    onchange="calc();"
+                    id="retained-earnings"
+                  />
+
+                  <label for="accum-other-income">Accum Other Income</label>
+                  <input
+                    type="number"
+                    onchange="calc();"
+                    id="accum-other-income"
+                  />
+
+                  <label for="total-owners-equity" class="auto-calculated-items"
+                    >Total Owners Equity</label
+                  >
+                  <input
+                    type="number"
+                    onchange="calc();"
+                    id="total-owners-equity"
+                    readonly
+                  />
+
+                  <label for="total-liabilities-and-equity"
+                    >Total Liabilities and Owners Equity</label
+                  >
+                  <input
+                    type="number"
+                    onchange="calc();"
+                    id="total-liabilities-and-equity"
+                    readonly
+                  />
+
+                  <label>Income Statement</label>
+
+                  <label>Income Statement</label>
+
+                  <label for="sales">Sales</label>
+                  <input type="number" onchange="calc();" id="sales" />
+
+                  <label for="cost-of-goods">Cost of Goods Sold</label>
+                  <input type="number" onchange="calc();" id="cost-of-goods" />
+
+                  <label for="administrative-expenses"
+                    >Administrative Expenses</label
+                  >
+                  <input
+                    type="number"
+                    onchange="calc();"
+                    id="administrative-expenses"
+                  />
+
+                  <label for="depreciation">Depreciation</label>
+                  <input type="number" onchange="calc();" id="depreciation" />
+
+                  <label
+                    for="earnings-before-interest-and-taxes"
+                    class="auto-calculated-items"
+                    >Earnings Before Interest and Taxes</label
+                  >
+                  <input
+                    type="number"
+                    onchange="calc();"
+                    id="earnings-before-interest-and-taxes"
+                    readonly
+                  />
+
+                  <label for="interest-expense">Interest Expense</label>
+                  <input
+                    type="number"
+                    onchange="calc();"
+                    id="interest-expense"
+                  />
+
+                  <label for="taxable-income" class="auto-calculated-items"
+                    >Taxable Income</label
+                  >
+                  <input
+                    type="number"
+                    onchange="calc();"
+                    id="taxable-income"
+                    readonly
+                  />
+
+                  <label for="taxes">Taxes</label>
+                  <input type="number" onchange="calc();" id="taxes" />
+
+                  <label for="net-income" class="auto-calculated-items"
+                    >Net Income</label
+                  >
+                  <input
+                    type="number"
+                    onchange="calc();"
+                    id="net-income"
+                    readonly
+                  />
+
+                  <label for="dividends">Dividends</label>
+                  <input type="number" onchange="calc();" id="dividends" />
+
+                  <label
+                    for="addition-to-retained-earnings"
+                    class="auto-calculated-items"
+                    >Addition to Retained Earnings</label
+                  >
+                  <input
+                    type="number"
+                    onchange="calc();"
+                    id="addition-to-retained-earnings"
+                    readonly
+                  />
+
+                  <label>Other Information</label>
+
+                  <label for="shares-outstanding">Shares Outstanding</label>
+                  <input
+                    type="number"
+                    onchange="calc();"
+                    id="shares-outstanding"
+                  />
+
+                  <label for="price-per-share">Price Per Share</label>
+                  <input
+                    type="number"
+                    onchange="calc();"
+                    id="price-per-share"
+                  />
+
+                  <button class="btn" type="button" id="balance-sheet-reset">
+                    Reset
+                  </button>
+                  <button
+                    class="btn"
+                    type="button"
+                    id="balance-sheet-calculate"
+                    onclick="calc();"
+                  >
+                    Calculate
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="right">
+              <div class="out">
+                <div id="balance-sheet-result" hidden>
+                  <p>
+                    <span
+                      >Current Ratio = Total Current Assets / Total Current
+                      Liabilities =</span
+                    ><span id="current-ratio"></span>
+                  </p>
+                  <p>
+                    <span
+                      >Quick Ratio = (Total Current Assets - Inventory) / Total
+                      Current Liabilities =</span
+                    ><span id="quick-ratio"></span>
+                  </p>
+                  <p>
+                    <span
+                      >Receivable Turnover = Sales / Accounts Receivable = </span
+                    ><span id="receivable-turnover"></span>
+                  </p>
+                  <p>
+                    <span>Days' Receivables = Days / Receivable Turnover =</span
+                    ><span id="days-receivable"></span>
+                  </p>
+                  <p>
+                    <span
+                      >Inventory Turnover = Cost of Goods Sold / Inventory
+                      =</span
+                    ><span id="inventory-turnover"></span>
+                  </p>
+                  <p>
+                    <span>Days' Inventory = Days / Inventory Turnover =</span
+                    ><span id="days-inventory"></span>
+                  </p>
+                  <p>
+                    <span
+                      >Fixed Assets Turnover = Sales / Net Fixed Assets =</span
+                    ><span id="fixed-assets-turnover"></span>
+                  </p>
+                  <p>
+                    <span>Total Assets Turnover = Sales / Total Assets =</span
+                    ><span id="total-assets-turnover"></span>
+                  </p>
+                  <p>
+                    <span
+                      >Times Interest Earned = Earnings Before Interest and
+                      Taxes / Interest Expense =</span
+                    ><span id="times-interest-earned"></span>
+                  </p>
+                  <p>
+                    <span
+                      >Debt Ratio = (Total Assets - Total Owner's Equity) /
+                      Total Assets =</span
+                    ><span id="debt-ratio"></span>
+                  </p>
+                  <p>
+                    <span
+                      >Debt to Equity Ratio = (Total Assets - Total Owner's
+                      Equity) / Total Owner's Equity =</span
+                    ><span id="debt-to-eqity-ratio"></span>
+                  </p>
+                  <p>
+                    <span
+                      >Equity Multiplier = Total Assets / Total Owner's Equity
+                      =</span
+                    ><span id="equity-multiplier"></span>
+                  </p>
+                  <p>
+                    <span>Profit Margin = Net Income / Sales =</span
+                    ><span id="profit-margin"></span>
+                  </p>
+                  <p>
+                    <span
+                      >Return on Assets (ROA) = Net Income / Total Assets
+                      =</span
+                    ><span id="return-on-assets"></span>
+                  </p>
+                  <p>
+                    <span
+                      >Return on Equity (ROE) = Net Income / Total Owner's
+                      Equity = </span
+                    ><span id="return-on-equity"></span>
+                  </p>
+                  <p>
+                    <span
+                      >Payout and Retention Ratios = Dividend / Net Income
+                      =</span
+                    ><span id="payout-and-retention-ratios"></span>
+                  </p>
+                  <p>
+                    <span
+                      >Earning per Share = Net Income / Shares Outstanding
+                      =</span
+                    ><span id="earning-per-share"></span>
+                  </p>
+                  <p>
+                    <span
+                      >Price/Earning Ratio = Price per Share / Earning per Share
+                      =</span
+                    ><span id="price-per-earning-ratio"></span>
+                  </p>
+                  <p>
+                    <span
+                      >Book Value per Share = Total Owner's Equity / Shares
+                      Outstanding =</span
+                    ><span id="book-value-per-share"></span>
+                  </p>
+                  <p>
+                    <span
+                      >Market-to-Book Ratio = Price per Share / Book Value per
+                      Share =</span
+                    ><span id="market-to-book-ratio"></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(".side").load("../sidebar.html", function () {
+        // jQuery code here
+        $(".btnn").click(function () {
+          $(this).toggleClass("click");
+          $(".sidebar").toggleClass("show");
+          $(".main").toggleClass("collapsed");
+        });
+        $(".serv-btn").click(function () {
+          $(this).toggleClass("show1");
+          $(this).next().slideToggle();
+          $(this).find(".second").toggleClass("rotate");
+        });
+        $("nav ul li").click(function () {
+          $(this).addClass("active").siblings().removeClass("active");
+        });
+      });
+    </script>
+    <script src="../js/miscellaneous/bsisAnalysis.js"></script>
+  </body>
+</html>

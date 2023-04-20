@@ -19,8 +19,10 @@ document.getElementById("calc-tax-free-yield").addEventListener("click", () => {
 document.getElementById("tey-reset").addEventListener("click", () => {
   document.getElementById("taxable-yield-calculator").reset();
   document.getElementById("tax-free-yield-calculator").reset();
+  document.getElementById("res1").innerHTML = "";
+  document.getElementById("res2").innerHTML = "";
 });
 
 document.getElementById("tey-table").addEventListener("click", () => {
-  location.href = "/teyTable.html";
+  location.href = "../finance-and-investment/teyTable.html";
 });

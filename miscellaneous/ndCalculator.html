@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Net Distribution Calculator</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navigation">
+        <h1>NAV BAR</h1>
+      </div>
+      <div class="wrapper">
+        <div class="side"></div>
+        <!--this is the div where the sidebar is imported--->
+        <div class="main">
+          <div class="show">
+            <div class="name">
+              <h1>Net Distribution Calculator</h1>
+            </div>
+            <div class="left">
+              <div class="inp">
+                <!--it is the input div,put all the input fields(inside form) here-->
+                <form id="net-distribution-calculator">
+                  <label>Calculate</label>
+                  <input
+                    type="radio"
+                    name="net-gross"
+                    id="net-distribution"
+                    checked
+                    value="1"
+                    onclick="calc();"
+                  />
+                  <label for="net-distribution">Net Distribution</label>
+                  <input
+                    type="radio"
+                    name="net-gross"
+                    id="gross-distribution"
+                    value="2"
+                    onclick="calc();"
+                  />
+                  <label for="gross-distribution">Gross Distibution</label>
+
+                  <label for="amount" id="amount-label">Net Amount</label>
+                  <input type="number" id="amount" />
+
+                  <label for="federal-withholdings"
+                    >Federal Withholdings (%)</label
+                  >
+                  <input type="number" id="federal-withholdings" />
+
+                  <label for="state-withholdings">State Withholdings (%)</label>
+                  <input type="number" id="state-withholdings" />
+
+                  <label for="fee">Fee</label>
+                  <input type="number" id="fee" />
+
+                  <button class="btn" type="button" id="distribution-reset">
+                    Reset
+                  </button>
+                  <button
+                    class="btn"
+                    type="button"
+                    id="distribution-calculate"
+                    onclick="calc();"
+                  >
+                    Calculate
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="right">
+              <div class="out">
+                <div id="distribution-result" hidden>
+                  <p>
+                    <span>Total Tax:</span><span id="result-total-tax"></span>
+                  </p>
+                  <p><span>Fee:</span><span id="result-fee"></span></p>
+                  <p>
+                    <span>Federal Withholdings:</span
+                    ><span id="result-federal-withholdings"></span>
+                  </p>
+                  <p>
+                    <span>State Withholdings:</span
+                    ><span id="result-state-withholdings"></span>
+                  </p>
+                  <p>
+                    <span id="result-distribution-label"
+                      >Gross Distribution:</span
+                    ><span id="result-distribution"></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(".side").load("../sidebar.html", function () {
+        // jQuery code here
+        $(".btnn").click(function () {
+          $(this).toggleClass("click");
+          $(".sidebar").toggleClass("show");
+          $(".main").toggleClass("collapsed");
+        });
+        $(".serv-btn").click(function () {
+          $(this).toggleClass("show1");
+          $(this).next().slideToggle();
+          $(this).find(".second").toggleClass("rotate");
+        });
+        $("nav ul li").click(function () {
+          $(this).addClass("active").siblings().removeClass("active");
+        });
+      });
+    </script>
+    <script src="../js/miscellaneous/ndCalculator.js"></script>
+  </body>
+</html>

@@ -11,9 +11,14 @@ a:focus {
     OFFCANVAS ESSENTIALS
 ----------------------------------------------------- */
 
-.offcanvas-start {
+/*  .offcanvas-start {
   width: 250px;
+}*/
+
+.offcanvas {
+  max-width: 250px;
 }
+
 
 /* Desktop view */
 @media (min-width: 576px) {
@@ -155,7 +160,6 @@ a:focus {
 .btn-toggle[aria-expanded="true"]::before {
   transform: rotate(90deg);
 }
-
 .btn-toggle-nav a {
   display: inline-flex;
   padding: .1875rem .5rem;

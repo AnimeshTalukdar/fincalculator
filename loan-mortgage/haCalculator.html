@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Affordability Calculator</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navigation">
+        <h1>NAV BAR</h1>
+      </div>
+      <div class="wrapper">
+        <div class="side"></div>
+        <!--this is the div where the sidebar is imported--->
+        <div class="main">
+          <div class="show">
+            <div class="name">
+              <h1>Home Affordability Calculator</h1>
+            </div>
+            <div class="left">
+              <div class="inp">
+                <!--it is the input div,put all the input fields(inside form) here-->
+                <form id="ha-calculator">
+                  <label for="annual-income">Annual Income:</label>
+                  <input type="number" id="annual-income" />
+
+                  <label for="monthly-debt">Monthly Debts:</label>
+                  <input type="number" id="monthly-debt" />
+
+                  <label for="down-payment">Down Payment:</label>
+                  <input type="number" id="down-payment" />
+
+                  <label for="interest-rate">Annual Interest Rate (%):</label>
+                  <input type="number" id="interest-rate" />
+
+                  <label for="loan-term">Loan Term (in months):</label>
+                  <input type="number" id="loan-term" />
+
+                  <label for="dti-ratio">Debt-to-income Ratio (%):</label>
+                  <input type="number" id="dti-ratio" />
+
+                  <label for="annual-property-tax">Annual Property Tax:</label>
+                  <input type="number" id="annual-property-tax" />
+
+                  <label for="annual-insurance">Annual Insurance:</label>
+                  <input type="number" id="annual-insurance" />
+
+                  <button class="btn" type="button" id="ha-reset">reset</button>
+                  <button class="btn" type="button" id="ha-calculate">
+                    Calculate
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="right">
+              <div class="out">
+                <div id="ha-result" hidden>
+                  <p>
+                    <span>Afford a house up to:&nbsp;&nbsp;</span
+                    ><span id="affordable-home-price"></span>
+                  </p>
+                  <p>
+                    <span>Monthly payment:&nbsp;&nbsp;</span
+                    ><span id="monthly-payment"></span>
+                  </p>
+                  <p>
+                    <span>Annual payment:&nbsp;&nbsp;</span
+                    ><span id="annual-payment"></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(".side").load("../sidebar.html", function () {
+        // jQuery code here
+        $(".btnn").click(function () {
+          $(this).toggleClass("click");
+          $(".sidebar").toggleClass("show");
+          $(".main").toggleClass("collapsed");
+        });
+        $(".serv-btn").click(function () {
+          $(this).toggleClass("show1");
+          $(this).next().slideToggle();
+          $(this).find(".second").toggleClass("rotate");
+        });
+        $("nav ul li").click(function () {
+          $(this).addClass("active").siblings().removeClass("active");
+        });
+      });
+    </script>
+
+    <script src="../js/loan-mortgage/haCalculator.js"></script>
+  </body>
+</html>

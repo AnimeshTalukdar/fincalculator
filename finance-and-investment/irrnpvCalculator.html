@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IRR NPV Calculator</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navigation">
+        <h1>NAV BAR</h1>
+      </div>
+      <div class="wrapper">
+        <div class="side"></div>
+        <!--this is the div where the sidebar is imported--->
+        <div class="main">
+          <div class="show">
+            <div class="name">
+              <h1>IRR NPV Calculator</h1>
+            </div>
+            <div class="left">
+              <div class="inp">
+                <!--it is the input div,put all the input fields(inside form) here-->
+                <form id="irr-npv-calculator">
+                  <label for="discount-rate">Discount Rate(%)</label>
+                  <input type="number" id="discount-rate" />
+
+                  <label for="cf0">Cash Flow 0</label>
+                  <input type="number" id="cf0" class="cf" />
+
+                  <label for="cf0">Cash Flow 1</label>
+                  <input type="number" id="cf1" class="cf" />
+
+                  <label for="cf0">Cash Flow 2</label>
+                  <input type="number" id="cf2" class="cf" />
+
+                  <label for="cf0">Cash Flow 3</label>
+                  <input type="number" id="cf3" class="cf" />
+
+                  <label for="cf0">Cash Flow 4</label>
+                  <input type="number" id="cf4" class="cf" />
+
+                  <label for="cf0">Cash Flow 5</label>
+                  <input type="number" id="cf5" class="cf" />
+
+                  <label for="cf0">Cash Flow 6</label>
+                  <input type="number" id="cf6" class="cf" />
+
+                  <label for="cf0">Cash Flow 7</label>
+                  <input type="number" id="cf7" class="cf" />
+
+                  <label for="cf0">Cash Flow 8</label>
+                  <input type="number" id="cf8" class="cf" />
+
+                  <label for="cf0">Cash Flow 9</label>
+                  <input type="number" id="cf9" class="cf" />
+
+                  <button class="btn" id="irr-npv-reset" type="button">
+                    Reset
+                  </button>
+                  <button class="btn" id="irr-npv-calculate" type="button">
+                    Calculate
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="right">
+              <div class="out">
+                <div id="irr-npv-result" hidden>
+                  <p>
+                    <span>Internal Return Rate:&nbsp;&nbsp;</span
+                    ><span id="irr"></span>
+                  </p>
+                  <p>
+                    <span>Net Present Value:&nbsp;&nbsp;</span
+                    ><span id="npv"></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(".side").load("../sidebar.html", function () {
+        // jQuery code here
+        $(".btnn").click(function () {
+          $(this).toggleClass("click");
+          $(".sidebar").toggleClass("show");
+          $(".main").toggleClass("collapsed");
+        });
+        $(".serv-btn").click(function () {
+          $(this).toggleClass("show1");
+          $(this).next().slideToggle();
+          $(this).find(".second").toggleClass("rotate");
+        });
+        $("nav ul li").click(function () {
+          $(this).addClass("active").siblings().removeClass("active");
+        });
+      });
+    </script>
+    <script src="../js/finance-and-investment/irrnpvCalculator.js"></script>
+  </body>
+</html>
