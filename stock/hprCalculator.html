@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Return On Investment Calculator</title>
+    <title>Financial Calculator</title>
     <link rel="stylesheet" href="../styles/style.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <link
@@ -12,6 +12,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
   </head>
+
   <body>
     <div class="container">
       <div class="navigation">
@@ -23,46 +24,35 @@
         <div class="main">
           <div class="show">
             <div class="name">
-              <h1>Return On Investment Calculator</h1>
+              <h1>Holding Period Return Calculator</h1>
             </div>
             <div class="left">
               <div class="inp">
                 <!--it is the input div,put all the input fields(inside form) here-->
-                <form id="roi-calculator">
-                  <label for="original-investment">Original Investment</label>
-                  <input id="original-investment" type="number" />
-
-                  <label for="investment-return">Investment Return</label>
-                  <input id="investment-return" type="number" />
-
-                  <label for="holding-period">Holding Period(in years)</label>
-                  <input id="holding-period" type="number" />
-
-                  <button class="btn" id="roi-reset" type="button">Reset</button>
-                  <button class="btn" id="roi-calculate" type="button">Calculate</button>
+                <form>
+                  <label for="beginning_value">Beginning Value:</label>
+                  <input type="number" id="beginning_value" /><br /><br />
+                  <label for="ending_value">Ending Value:</label>
+                  <input type="number" id="ending_value" /><br /><br />
+                  <label for="income_received">Income Received:</label>
+                  <input type="number" id="income_received" /><br /><br />
+                  <button type="button" class="btn" onclick="calculate()">
+                    Calculate
+                  </button>
+                  <button type="reset" class="btn">Reset</button>
                 </form>
               </div>
             </div>
             <div class="right">
               <div class="out">
-                <div id="roi-result" hidden>
-                  <p><span>Gain:&nbsp;&nbsp;</span><span id="gain"></span></p>
-                  <p>
-                    <span>Return on Investment:&nbsp;&nbsp;</span
-                    ><span id="roi"></span>
-                  </p>
-                  <p>
-                    <span>Annualized ROI:&nbsp;&nbsp;</span
-                    ><span id="annualized-roi"></span>
-                  </p>
-                </div>
+                <!--put all the result related(output) fields here in this div-->
+                <p id="result">Result:</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
     <script>
       $(".side").load("../sidebar.html", function () {
         // jQuery code here
@@ -81,6 +71,6 @@
         });
       });
     </script>
-    <script src="../js/finance-and-investment/roiCalculator.js"></script>
+    <script src="../js/stock/hprCalculator.js"></script>
   </body>
 </html>

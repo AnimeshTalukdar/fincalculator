@@ -28,60 +28,118 @@
             <div class="left">
               <div class="inp">
                 <!--it is the input div,put all the input fields(inside form) here-->
-                <form id="irr-npv-calculator">
-                  <label for="discount-rate">Discount Rate(%)</label>
-                  <input type="number" id="discount-rate" />
+                <form id="irrnpv-form">
+                  <label for="discount-rate">Discount Rate:</label>
+                  <input
+                    type="number"
+                    id="discount-rate"
+                    name="discount-rate"
+                  /><br /><br />
 
-                  <label for="cf0">Cash Flow 0</label>
-                  <input type="number" id="cf0" class="cf" />
+                  <label for="cash-flow-0">Cash Flow 0:</label>
+                  <input
+                    type="number"
+                    name="cash-flow-0"
+                    id="cash-flow-0"
+                  /><br />
 
-                  <label for="cf0">Cash Flow 1</label>
-                  <input type="number" id="cf1" class="cf" />
+                  <label for="cash-flow-1">Cash Flow 1:</label>
+                  <input
+                    type="number"
+                    id="cash-flow-1"
+                    name="cash-flow-1"
+                  /><br />
 
-                  <label for="cf0">Cash Flow 2</label>
-                  <input type="number" id="cf2" class="cf" />
+                  <label for="cash-flow-2">Cash Flow 2:</label>
+                  <input
+                    type="number"
+                    id="cash-flow-2"
+                    name="cash-flow-2"
+                  /><br />
 
-                  <label for="cf0">Cash Flow 3</label>
-                  <input type="number" id="cf3" class="cf" />
+                  <label for="cash-flow-3">Cash Flow 3:</label>
+                  <input
+                    type="number"
+                    id="cash-flow-3"
+                    name="cash-flow-3"
+                  /><br />
 
-                  <label for="cf0">Cash Flow 4</label>
-                  <input type="number" id="cf4" class="cf" />
+                  <label for="cash-flow-4">Cash Flow 4:</label>
+                  <input
+                    type="number"
+                    id="cash-flow-4"
+                    name="cash-flow-4"
+                  /><br />
 
-                  <label for="cf0">Cash Flow 5</label>
-                  <input type="number" id="cf5" class="cf" />
+                  <label for="cash-flow-5">Cash Flow 5:</label>
+                  <input
+                    type="number"
+                    id="cash-flow-5"
+                    name="cash-flow-5"
+                  /><br />
 
-                  <label for="cf0">Cash Flow 6</label>
-                  <input type="number" id="cf6" class="cf" />
+                  <label for="cash-flow-6">Cash Flow 6:</label>
+                  <input
+                    type="number"
+                    id="cash-flow-6"
+                    name="cash-flow-6"
+                  /><br />
 
-                  <label for="cf0">Cash Flow 7</label>
-                  <input type="number" id="cf7" class="cf" />
+                  <label for="cash-flow-7">Cash Flow 7:</label>
+                  <input
+                    type="number"
+                    id="cash-flow-7"
+                    name="cash-flow-7"
+                  /><br />
 
-                  <label for="cf0">Cash Flow 8</label>
-                  <input type="number" id="cf8" class="cf" />
+                  <label for="cash-flow-8">Cash Flow 8:</label>
+                  <input
+                    type="number"
+                    id="cash-flow-8"
+                    name="cash-flow-8"
+                  /><br />
 
-                  <label for="cf0">Cash Flow 9</label>
-                  <input type="number" id="cf9" class="cf" />
+                  <label for="cash-flow-9">Cash Flow 9:</label>
+                  <input
+                    type="number"
+                    id="cash-flow-9"
+                    name="cash-flow-9"
+                  /><br /><br />
 
-                  <button class="btn" id="irr-npv-reset" type="button">
-                    Reset
-                  </button>
-                  <button class="btn" id="irr-npv-calculate" type="button">
-                    Calculate
-                  </button>
+                  <input
+                    class="btn"
+                    type="button"
+                    value="Reset"
+                    onclick="reset();"
+                  />
+                  <input
+                    class="btn"
+                    type="button"
+                    value="Calculate"
+                    onclick="calc();"
+                  />
                 </form>
               </div>
             </div>
             <div class="right">
               <div class="out">
-                <div id="irr-npv-result" hidden>
+                <div id="irrnpv-result" hidden>
                   <p>
-                    <span>Internal Return Rate:&nbsp;&nbsp;</span
-                    ><span id="irr"></span>
+                    <span
+                      >Internal Return Rate(IRR):&nbsp;&nbsp;<span
+                        id="result-irr"
+                      ></span
+                    ></span>
                   </p>
+                  <br />
                   <p>
-                    <span>Net Present Value:&nbsp;&nbsp;</span
-                    ><span id="npv"></span>
+                    <span
+                      >Net Present Value(NPV):&nbsp;&nbsp;<span
+                        id="result-npv"
+                      ></span>
+                    </span>
                   </p>
+                  <br />
                 </div>
               </div>
             </div>
@@ -108,6 +166,7 @@
         });
       });
     </script>
+
     <script src="../js/finance-and-investment/irrnpvCalculator.js"></script>
   </body>
 </html>

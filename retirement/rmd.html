@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Return On Investment Calculator</title>
+    <title>Required Minimum Distribution (RMD)</title>
     <link rel="stylesheet" href="../styles/style.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <link
@@ -23,38 +23,46 @@
         <div class="main">
           <div class="show">
             <div class="name">
-              <h1>Return On Investment Calculator</h1>
+              <h1>Required Minimum Distribution (RMD) Calculator</h1>
             </div>
             <div class="left">
               <div class="inp">
                 <!--it is the input div,put all the input fields(inside form) here-->
-                <form id="roi-calculator">
-                  <label for="original-investment">Original Investment</label>
-                  <input id="original-investment" type="number" />
+                <div>
+                  <label for="age">Age at Year-End</label>
+                  <input id="age" type="number" min="0" max="150" />
+                </div>
 
-                  <label for="investment-return">Investment Return</label>
-                  <input id="investment-return" type="number" />
+                <div>
+                  <label for="prevBalance"
+                    >Previous Year-End Account Balance</label
+                  >
+                  <input id="prevBalance" type="number" min="0" step="0.01" />
+                </div>
 
-                  <label for="holding-period">Holding Period(in years)</label>
-                  <input id="holding-period" type="number" />
+                <div>
+                  <label for="spouseBeneficiary"
+                    >Spouse Sole Beneficiary who is more than 10 years
+                    younger</label
+                  >
+                  <input id="spouseBeneficiary" type="checkbox" />
+                </div>
 
-                  <button class="btn" id="roi-reset" type="button">Reset</button>
-                  <button class="btn" id="roi-calculate" type="button">Calculate</button>
-                </form>
+                <div>
+                  <button class="btn" id="calculateButton" type="button">
+                    Calculate RMD
+                  </button>
+                  <button class="btn" id="resetButton" type="button">
+                    Reset
+                  </button>
+                </div>
               </div>
             </div>
             <div class="right">
               <div class="out">
-                <div id="roi-result" hidden>
-                  <p><span>Gain:&nbsp;&nbsp;</span><span id="gain"></span></p>
-                  <p>
-                    <span>Return on Investment:&nbsp;&nbsp;</span
-                    ><span id="roi"></span>
-                  </p>
-                  <p>
-                    <span>Annualized ROI:&nbsp;&nbsp;</span
-                    ><span id="annualized-roi"></span>
-                  </p>
+                <div>
+                  <label for="rmdAmount">RMD Amount:</label>
+                  <span id="rmdAmount"></span>
                 </div>
               </div>
             </div>
@@ -81,6 +89,7 @@
         });
       });
     </script>
-    <script src="../js/finance-and-investment/roiCalculator.js"></script>
+
+    <script src="js/rmd.js"></script>
   </body>
 </html>

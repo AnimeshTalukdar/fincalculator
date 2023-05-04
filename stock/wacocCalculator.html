@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Return On Investment Calculator</title>
+    <title>Weighted Average Cost of Capital (WACC) Calculator</title>
     <link rel="stylesheet" href="../styles/style.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <link
@@ -23,39 +23,60 @@
         <div class="main">
           <div class="show">
             <div class="name">
-              <h1>Return On Investment Calculator</h1>
+              <h1>Weighted Average Cost of Capital (WACC) Calculator</h1>
             </div>
             <div class="left">
               <div class="inp">
                 <!--it is the input div,put all the input fields(inside form) here-->
-                <form id="roi-calculator">
-                  <label for="original-investment">Original Investment</label>
-                  <input id="original-investment" type="number" />
+                <form>
+                  <label for="cost_of_equity">Cost of Equity:</label>
+                  <input
+                    type="number"
+                    id="cost_of_equity"
+                    step="0.01"
+                    required
+                  /><br /><br />
 
-                  <label for="investment-return">Investment Return</label>
-                  <input id="investment-return" type="number" />
+                  <label for="total_equity">Total Equity:</label>
+                  <input type="number" id="total_equity" required /><br /><br />
 
-                  <label for="holding-period">Holding Period(in years)</label>
-                  <input id="holding-period" type="number" />
+                  <label for="cost_of_debt">Cost of Debt:</label>
+                  <input
+                    type="number"
+                    id="cost_of_debt"
+                    step="0.01"
+                    required
+                  /><br /><br />
 
-                  <button class="btn" id="roi-reset" type="button">Reset</button>
-                  <button class="btn" id="roi-calculate" type="button">Calculate</button>
+                  <label for="total_debt">Total Debt:</label>
+                  <input type="number" id="total_debt" required /><br /><br />
+
+                  <label for="corporate_tax_rate">Corporate Tax Rate:</label>
+                  <input
+                    type="number"
+                    id="corporate_tax_rate"
+                    step="0.01"
+                    required
+                  /><br /><br />
+
+                  <input
+                    class="btn"
+                    type="button"
+                    value="Calculate"
+                    onclick="calculateWACC()"
+                  /><br /><br />
+                  <input
+                    class="btn"
+                    type="button"
+                    value="Reset"
+                    onclick="resetForm()"
+                  /><br /><br />
                 </form>
               </div>
             </div>
             <div class="right">
               <div class="out">
-                <div id="roi-result" hidden>
-                  <p><span>Gain:&nbsp;&nbsp;</span><span id="gain"></span></p>
-                  <p>
-                    <span>Return on Investment:&nbsp;&nbsp;</span
-                    ><span id="roi"></span>
-                  </p>
-                  <p>
-                    <span>Annualized ROI:&nbsp;&nbsp;</span
-                    ><span id="annualized-roi"></span>
-                  </p>
-                </div>
+                <div id="result"></div>
               </div>
             </div>
           </div>
@@ -81,6 +102,7 @@
         });
       });
     </script>
-    <script src="../js/finance-and-investment/roiCalculator.js"></script>
+
+    <script src="../js/stock/wacocCalculator.js"></script>
   </body>
 </html>

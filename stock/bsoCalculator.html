@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Discount and Tax Calculator</title>
+    <title>Black-Scholes Option Calculator</title>
     <link rel="stylesheet" href="../styles/style.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <link
@@ -23,56 +23,68 @@
         <div class="main">
           <div class="show">
             <div class="name">
-              <h1>Discount and Tax Calculator</h1>
+              <h1>Black-Scholes Option Calculator</h1>
             </div>
             <div class="left">
               <div class="inp">
                 <!--it is the input div,put all the input fields(inside form) here-->
-                <form id="discount-tax-calculator">
-                  <label for="discount">Discount</label>
+                <form>
+                  <label for="stock_price">Stock Price:</label>
                   <input
-                    type="radio"
-                    name="discount-or-increase"
-                    id="discount"
-                    checked
-                  />
-                  &nbsp;&nbsp;&nbsp;
-                  <label for="increase">Increase</label>
-                  <input
-                    type="radio"
-                    name="discount-or-increase"
-                    id="increase"
+                    type="number"
+                    id="stock_price"
+                    name="stock_price"
+                    step="0.01"
+                    required
                   />
                   <br />
-
-                  <label for="price">Price</label>
-                  <input type="number" id="price" />
-
-                  <label id="percent-up-or-down" for="percent">Percent</label>
-                  <input type="number" id="percent" />
-
-                  <label for="sales-tax">Sales tax (%)</label>
-                  <input type="number" id="sales-tax" />
-
-                  <button class="btn" type="button" id="dt-reset">Reset</button>
-                  <button class="btn" type="button" id="dt-calculate">
+                  <label for="strike_price">Strike Price:</label>
+                  <input
+                    type="number"
+                    id="strike_price"
+                    name="strike_price"
+                    step="0.01"
+                    required
+                  />
+                  <br />
+                  <label for="volatility">Annualized Volatility (%):</label>
+                  <input
+                    type="number"
+                    id="volatility"
+                    name="volatility"
+                    step="0.01"
+                    required
+                  />
+                  <br />
+                  <label for="interest_rate"
+                    >Risk-free Interest Rate (%):</label
+                  >
+                  <input
+                    type="number"
+                    id="interest_rate"
+                    name="interest_rate"
+                    step="0.01"
+                    required
+                  />
+                  <br />
+                  <label for="days_to_maturity">Days to Maturity:</label>
+                  <input
+                    type="number"
+                    id="days_to_maturity"
+                    name="days_to_maturity"
+                    required
+                  />
+                  <br />
+                  <button class="btn" type="button" onclick="calculate()">
                     Calculate
                   </button>
+                  <button class="btn" type="reset">Reset</button>
                 </form>
               </div>
             </div>
             <div class="right">
               <div class="out">
-                <div id="dt-result" hidden>
-                  <p>
-                    <span id="savings-or-moretopay">Savings: </span
-                    ><span id="difference"></span>
-                  </p>
-                  <p><span>Tax: </span><span id="tax"></span></p>
-                  <p>
-                    <span>Total Payment: </span><span id="total-payment"></span>
-                  </p>
-                </div>
+                <div id="result"></div>
               </div>
             </div>
           </div>
@@ -99,6 +111,6 @@
       });
     </script>
 
-    <script src="../js/miscellaneous/dtCalculator.js"></script>
+    <script src="../js/stock/bsoCalculator.js"></script>
   </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fibonacci Calculator</title>
+    <title>Capital Asset Pricing Model Calculator (CAPM)</title>
     <link rel="stylesheet" href="../styles/style.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <link
@@ -23,44 +23,46 @@
         <div class="main">
           <div class="show">
             <div class="name">
-              <h1>Fibonacci Calculator</h1>
+              <h1>Capital Asset Pricing Model Calculator (CAPM)</h1>
             </div>
             <div class="left">
               <div class="inp">
                 <!--it is the input div,put all the input fields(inside form) here-->
-                <form id="fibonacci-calculator">
-                  <label for="low">Low</label>
-                  <input type="number" id="low" />
-                  <label for="high">High</label>
-                  <input type="number" id="high" />
-                  <button
-                    class="btn"
-                    type="button"
-                    id="fib-calc-reset"
-                    onclick="hide();"
-                  >
-                    Reset
+                <form>
+                  <label>Expect Return on Stock (%):</label>
+                  <input
+                    type="number"
+                    id="expected_return"
+                    onchange="calculate()"
+                  />
+                  <br />
+                  <label>Risk Free Rate (%):</label>
+                  <input
+                    type="number"
+                    id="risk_free_rate"
+                    onchange="calculate()"
+                  />
+                  <br />
+                  <label>Expected Return on Market (%):</label>
+                  <input
+                    type="number"
+                    id="expected_market_return"
+                    onchange="calculate()"
+                  />
+                  <br />
+                  <label>Beta for Stock:</label>
+                  <input type="number" id="beta" onchange="calculate()" />
+                  <button class="btn" type="button" onclick="calculateBeta()">
+                    Calculate Beta
                   </button>
-                  <button
-                    class="btn"
-                    type="button"
-                    id="fib-calc-calc"
-                    onclick="calc();"
-                  >
-                    Calculate
-                  </button>
+                  <br />
+                  <button class="btn" type="reset">Reset</button>
                 </form>
               </div>
             </div>
             <div class="right">
               <div class="out">
-                <div id="result">
-                  <br />
-                  <table id="resultTable1"></table>
-                  <table id="resultTable2"></table>
-                  <table id="resultTable3"></table>
-                  <table id="resultTable4"></table>
-                </div>
+                <div id="result"></div>
               </div>
             </div>
           </div>
@@ -86,6 +88,7 @@
         });
       });
     </script>
-    <script src="../js/fibCalculator.js"></script>
+
+    <script src="../js/stock/capmCalculator.js"></script>
   </body>
 </html>
