@@ -21,7 +21,7 @@
         <div class="side"></div>
         <!--this is the div where the sidebar is imported--->
         <div class="main">
-          <div class="show">
+          <div class="show" id="main-screen">
             <div class="name">
               <h1>Return On Investment Calculator</h1>
             </div>
@@ -30,16 +30,26 @@
                 <!--it is the input div,put all the input fields(inside form) here-->
                 <form id="roi-calculator">
                   <label for="original-investment">Original Investment</label>
+                  <br />
                   <input id="original-investment" type="number" />
+                  <br />
 
                   <label for="investment-return">Investment Return</label>
+                  <br />
                   <input id="investment-return" type="number" />
+                  <br />
 
                   <label for="holding-period">Holding Period(in years)</label>
+                  <br />
                   <input id="holding-period" type="number" />
+                  <br />
 
-                  <button class="btn" id="roi-reset" type="button">Reset</button>
-                  <button class="btn" id="roi-calculate" type="button">Calculate</button>
+                  <button class="btn" id="roi-reset" type="button">
+                    Reset
+                  </button>
+                  <button class="btn" id="roi-calculate" type="button">
+                    Calculate
+                  </button>
                 </form>
               </div>
             </div>

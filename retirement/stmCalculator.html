@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>401k Save the Max Calculator</title>
+    <title>Financial Calculator</title>
     <link rel="stylesheet" href="../styles/style.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <link
@@ -12,6 +12,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
   </head>
+
   <body>
     <div class="container">
       <div class="navigation">
@@ -21,7 +22,7 @@
         <div class="side"></div>
         <!--this is the div where the sidebar is imported--->
         <div class="main">
-          <div class="show">
+          <div class="show" id="main-screen">
             <div class="name">
               <h1>401k Save the Max Calculator</h1>
             </div>
@@ -32,6 +33,7 @@
                   <label for="contribution-limit"
                     >Maximum Contribution Limit (in INR):
                   </label>
+                  <br />
                   <input
                     type="number"
                     id="contribution-limit"
@@ -39,14 +41,16 @@
                     required
                   /><br /><br />
 
-                  <label for="catch-up-checkbox">Are you 50 or older?</label>
+                  <label for="catch-up-box">Check if you are 50+ </label>&nbsp;
                   <input
                     type="checkbox"
-                    id="catch-up-checkbox"
-                    name="catch-up-checkbox"
+                    id="catch-up-box"
+                    onchange="boxChecked()"
+                    name="catch-up-box"
                   /><br /><br />
 
                   <label for="catch-up">Catch-up (in INR): </label>
+                  <br />
                   <input
                     type="number"
                     id="catch-up"
@@ -57,6 +61,7 @@
                   <label for="contribution-to-date"
                     >Contribution to Date (in INR):
                   </label>
+                  <br />
                   <input
                     type="number"
                     id="contribution-to-date"
@@ -67,6 +72,7 @@
                   <label for="remaining-pay-periods"
                     >Remaining Pay Periods:
                   </label>
+                  <br />
                   <input
                     type="number"
                     id="remaining-pay-periods"
@@ -75,41 +81,29 @@
                   /><br /><br />
 
                   <input
-                    class="btn"
                     type="button"
                     value="Calculate"
-                    onclick="calculate()"
-                  /><br /><br />
-
-                  <input
                     class="btn"
-                    type="reset"
-                    value="Reset"
-                    onclick="resetForm()"
+                    onclick="calculate()"
                   />
+                  <button type="button" class="btn">Reset</button>
                 </form>
               </div>
             </div>
             <div class="right">
               <div class="out">
-                <label for="max-contribution"
-                  >Maximum Contribution per Remaining Pay Period (in INR):
-                </label>
-                <output type="number" id="max-contribution"></output
-                ><br /><br />
+                <!--put all the result related(output) fields here in this div-->
+                <label for="max-contribution"></label>
+                <span type="number" id="max-contribution"></span><br /><br />
 
-                <label for="amount-remaining"
-                  >Amount Remaining to Max Contribution (in INR):
-                </label>
-                <output type="number" id="amount-remaining"></output
-                ><br /><br />
+                <label for="amount-remaining"></label>
+                <span type="number" id="amount-remaining"></span><br /><br />
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
     <script>
       $(".side").load("../sidebar.html", function () {
         // jQuery code here

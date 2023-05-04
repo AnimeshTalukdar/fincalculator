@@ -21,7 +21,7 @@
         <div class="side"></div>
         <!--this is the div where the sidebar is imported--->
         <div class="main">
-          <div class="show">
+          <div class="show" id="main-screen">
             <div class="name">
               <h1>Auto Lease Calculator</h1>
             </div>
@@ -30,34 +30,52 @@
                 <!--it is the input div,put all the input fields(inside form) here-->
                 <form id="a-lease-calculator">
                   <label for="vehicle-final-price">Vehicle Final Price</label>
+                  <br />
                   <input type="number" id="vehicle-final-price" />
+                  <br />
 
                   <label for="sale-tax">Sales Tax(%)</label>
+                  <br />
                   <input type="number" id="sale-tax" />
+                  <br />
+
                   <label for="pay-sales-tax-at-signup"
                     >Pay Sales Tax at Signup</label
-                  >
+                  >&nbsp;
                   <input type="checkbox" id="pay-sales-tax-at-signup" />
+                  <br />
 
                   <label for="down-payment">Down Payment</label>
+                  <br />
                   <input type="number" id="down-payment" />
+                  <br />
 
                   <label for="trade-in-value">Trade-In Value</label>
+                  <br />
                   <input type="number" id="trade-in-value" />
+                  <br />
 
                   <label for="amount-owed-on-trade-in"
                     >Amount Owed on Trade-in</label
                   >
+                  <br />
                   <input type="number" id="amount-owed-on-trade-in" />
+                  <br />
 
                   <label for="interest-rate">Interest Rate (APR%)</label>
+                  <br />
                   <input type="number" id="interest-rate" />
+                  <br />
 
                   <label for="lease-term">Lease Term (month)</label>
+                  <br />
                   <input type="number" id="lease-term" />
+                  <br />
 
                   <label for="residual-value">Residual Value</label>
+                  <br />
                   <input type="number" id="residual-value" />
+                  <br />
 
                   <button class="btn" id="a-lease-reset" type="button">
                     Reset

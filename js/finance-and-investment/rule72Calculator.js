@@ -20,5 +20,5 @@ document.getElementById("ir-calculate").addEventListener("click", () => {
 });
 
 document.getElementById("rule72-table").addEventListener("click", () => {
-  location.href = "/rule72Table.html";
+  location.href = "../finance-and-investment/rule72Table.html";
 });

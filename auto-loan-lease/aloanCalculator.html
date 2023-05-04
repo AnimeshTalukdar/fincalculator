@@ -20,7 +20,7 @@
         <div class="side"></div>
         <!--this is the div where the sidebar is imported--->
         <div class="main">
-          <div class="show">
+          <div class="show" id="main-screen">
             <div class="name">
               <h1>Auto Loan Calculator</h1>
             </div>
@@ -29,6 +29,7 @@
                 <!--it is the input div,put all the input fields(inside form) here-->
                 <form id="vehicleLoanForm" onsubmit="calculateLoan(event)">
                   <label for="vehiclePrice">Vehicle Price:</label>
+                  <br />
                   <input
                     type="number"
                     id="vehiclePrice"
@@ -37,6 +38,7 @@
                   /><br /><br />
 
                   <label for="salesTax">Sales Tax (%):</label>
+                  <br />
                   <input
                     type="number"
                     id="salesTax"
@@ -45,6 +47,7 @@
                   /><br /><br />
 
                   <label for="maxSalesTax">Max Sales Tax (%):</label>
+                  <br />
                   <input
                     type="number"
                     id="maxSalesTax"
@@ -53,6 +56,7 @@
                   /><br /><br />
 
                   <label for="taxableFees">Fees (Taxable):</label>
+                  <br />
                   <input
                     type="number"
                     id="taxableFees"
@@ -61,6 +65,7 @@
                   /><br /><br />
 
                   <label for="nonTaxableFees">Fees (Non-Taxable):</label>
+                  <br />
                   <input
                     type="number"
                     id="nonTaxableFees"
@@ -69,6 +74,7 @@
                   /><br /><br />
 
                   <label for="downPayment">Down Payment:</label>
+                  <br />
                   <input
                     type="number"
                     id="downPayment"
@@ -77,6 +83,7 @@
                   /><br /><br />
 
                   <label for="tradeInValue">Trade-In Value:</label>
+                  <br />
                   <input
                     type="number"
                     id="tradeInValue"
@@ -85,6 +92,7 @@
                   /><br /><br />
 
                   <label for="amountOwed">Amount Owed on Trade-In:</label>
+                  <br />
                   <input
                     type="number"
                     id="amountOwed"
@@ -93,6 +101,7 @@
                   /><br /><br />
 
                   <label for="interestRate">Interest Rate (%):</label>
+                  <br />
                   <input
                     type="number"
                     id="interestRate"
@@ -101,6 +110,7 @@
                   /><br /><br />
 
                   <label for="loanTerm">Loan Term (Months):</label>
+                  <br />
                   <input
                     type="number"
                     id="loanTerm"
@@ -109,6 +119,7 @@
                   /><br /><br />
 
                   <label for="extraPayment">Extra Payment per Month:</label>
+                  <br />
                   <input
                     type="number"
                     id="extraPayment"

@@ -21,7 +21,7 @@
         <div class="side"></div>
         <!--this is the div where the sidebar is imported--->
         <div class="main">
-          <div class="show">
+          <div class="show" id="main-screen">
             <div class="name">
               <h1>Loan Refinance Calculator</h1>
             </div>
@@ -31,31 +31,45 @@
                 <form id="lr-calculator">
                   <div>
                     <h3>Old Mortgage</h3>
+                    <br />
                     <label for="loan-amount">Loan Amount</label>
+                    <br />
                     <input type="number" id="loan-amount" />
+                    <br />
 
                     <label for="old-interest-rate"
                       >Annual Interest Rate (%)</label
                     >
+                    <br />
                     <input type="number" id="old-interest-rate" />
+                    <br />
 
                     <label for="old-loan-term">Loan Term (in months)</label>
+                    <br />
                     <input type="number" id="old-loan-term" />
+                    <br />
 
                     <label for="payment-made">Payment Made (months)</label>
+                    <br />
                     <input type="number" id="payment-made" />
+                    <br />
                   </div>
 
                   <div>
                     <h3>New Mortgage</h3>
+                    <br />
 
                     <label for="new-interest-rate"
                       >Annual Interest Rate (%)</label
                     >
+                    <br />
                     <input type="number" id="new-interest-rate" />
+                    <br />
 
                     <label for="new-loan-term">Loan Term (in months)</label>
+                    <br />
                     <input type="number" id="new-loan-term" />
+                    <br />
                   </div>
 
                   <button class="btn" id="lr-reset" type="button">Reset</button>
@@ -72,7 +86,7 @@
                   border="0"
                   cellspacing="10"
                   cellpadding="5"
-                  style="font-size: 12px;"
+                  style="font-size: 12px"
                   hidden
                 >
                   <tr>
@@ -87,16 +101,34 @@
                   </tr>
                   <tr>
                     <td valign="top" align="right">Monthly Payment:</td>
-                    <td valign="top" align="right" id="old-monthly-payment"></td>
-                    <td valign="top" align="right" id="new-monthly-payment"></td>
+                    <td
+                      valign="top"
+                      align="right"
+                      id="old-monthly-payment"
+                    ></td>
+                    <td
+                      valign="top"
+                      align="right"
+                      id="new-monthly-payment"
+                    ></td>
                   </tr>
                   <tr>
                     <td valign="top" align="right">Remaining Interest:</td>
-                    <td valign="top" align="right" id="old-remaining-interest"></td>
-                    <td valign="top" align="right" id="new-remaining-interest"></td>
+                    <td
+                      valign="top"
+                      align="right"
+                      id="old-remaining-interest"
+                    ></td>
+                    <td
+                      valign="top"
+                      align="right"
+                      id="new-remaining-interest"
+                    ></td>
                   </tr>
                   <tr>
-                    <td valign="top" align="right" colspan="2">Interest Saved:</td>
+                    <td valign="top" align="right" colspan="2">
+                      Interest Saved:
+                    </td>
                     <td valign="top" align="right" id="interest-saved"></td>
                   </tr>
                 </table>

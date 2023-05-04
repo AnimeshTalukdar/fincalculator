@@ -21,7 +21,7 @@
         <div class="side"></div>
         <!--this is the div where the sidebar is imported--->
         <div class="main">
-          <div class="show">
+          <div class="show" id="main-screen">
             <div class="name">
               <h1>Tax Equivalent Yield Calculator</h1>
             </div>
@@ -34,10 +34,14 @@
                   </h3>
                   <form id="taxable-yield-calculator">
                     <label for="tax-free-yield">Tax-free Yield (%)</label>
+                    <br />
                     <input id="tax-free-yield" type="number" />
+                    <br />
 
                     <label for="income-tax-rate1">Income Tax Rate (%)</label>
+                    <br />
                     <input id="income-tax-rate1" type="number" />
+                    <br />
 
                     <button class="btn" type="button" id="calc-taxable-yield">
                       Calculate
@@ -51,10 +55,14 @@
                   </h3>
                   <form id="tax-free-yield-calculator">
                     <label for="taxable-yield">Taxable Yield (%)</label>
+                    <br />
                     <input id="taxable-yield" type="number" />
+                    <br />
 
                     <label for="income-tax-rate2">Income Tax Rate (%)</label>
+                    <br />
                     <input id="income-tax-rate2" type="number" />
+                    <br />
 
                     <button class="btn" type="button" id="calc-tax-free-yield">
                       Calculate
@@ -70,6 +78,7 @@
               <div class="out">
                 <div id="tey-result">
                   <p>
+                    <br />
                     <span>Taxable Yield (%):&nbsp;&nbsp;</span
                     ><span id="res1"></span>
                   </p>

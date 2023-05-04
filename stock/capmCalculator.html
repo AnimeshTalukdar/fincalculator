@@ -21,7 +21,7 @@
         <div class="side"></div>
         <!--this is the div where the sidebar is imported--->
         <div class="main">
-          <div class="show">
+          <div class="show" id="main-screen">
             <div class="name">
               <h1>Capital Asset Pricing Model Calculator (CAPM)</h1>
             </div>
@@ -30,6 +30,7 @@
                 <!--it is the input div,put all the input fields(inside form) here-->
                 <form>
                   <label>Expect Return on Stock (%):</label>
+                  <br />
                   <input
                     type="number"
                     id="expected_return"
@@ -37,6 +38,7 @@
                   />
                   <br />
                   <label>Risk Free Rate (%):</label>
+                  <br />
                   <input
                     type="number"
                     id="risk_free_rate"
@@ -44,6 +46,7 @@
                   />
                   <br />
                   <label>Expected Return on Market (%):</label>
+                  <br />
                   <input
                     type="number"
                     id="expected_market_return"
@@ -51,7 +54,9 @@
                   />
                   <br />
                   <label>Beta for Stock:</label>
+                  <br />
                   <input type="number" id="beta" onchange="calculate()" />
+                  <br />
                   <button class="btn" type="button" onclick="calculateBeta()">
                     Calculate Beta
                   </button>

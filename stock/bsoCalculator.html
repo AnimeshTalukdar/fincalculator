@@ -21,7 +21,7 @@
         <div class="side"></div>
         <!--this is the div where the sidebar is imported--->
         <div class="main">
-          <div class="show">
+          <div class="show" id="main-screen">
             <div class="name">
               <h1>Black-Scholes Option Calculator</h1>
             </div>
@@ -30,6 +30,7 @@
                 <!--it is the input div,put all the input fields(inside form) here-->
                 <form>
                   <label for="stock_price">Stock Price:</label>
+                  <br />
                   <input
                     type="number"
                     id="stock_price"
@@ -39,6 +40,7 @@
                   />
                   <br />
                   <label for="strike_price">Strike Price:</label>
+                  <br />
                   <input
                     type="number"
                     id="strike_price"
@@ -48,6 +50,7 @@
                   />
                   <br />
                   <label for="volatility">Annualized Volatility (%):</label>
+                  <br />
                   <input
                     type="number"
                     id="volatility"
@@ -59,6 +62,7 @@
                   <label for="interest_rate"
                     >Risk-free Interest Rate (%):</label
                   >
+                  <br />
                   <input
                     type="number"
                     id="interest_rate"
@@ -68,6 +72,7 @@
                   />
                   <br />
                   <label for="days_to_maturity">Days to Maturity:</label>
+                  <br />
                   <input
                     type="number"
                     id="days_to_maturity"

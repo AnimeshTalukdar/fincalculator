@@ -21,7 +21,7 @@
         <div class="side"></div>
         <!--this is the div where the sidebar is imported--->
         <div class="main">
-          <div class="show">
+          <div class="show" id="main-screen">
             <div class="name">
               <h1>Net Distribution Calculator</h1>
             </div>
@@ -38,7 +38,7 @@
                     checked
                     value="1"
                     onclick="calc();"
-                  />
+                  />&nbsp;
                   <label for="net-distribution">Net Distribution</label>
                   <br />
                   <input
@@ -47,23 +47,31 @@
                     id="gross-distribution"
                     value="2"
                     onclick="calc();"
-                  />
+                  />&nbsp;
                   <label for="gross-distribution">Gross Distibution</label>
                   <br />
 
                   <label for="amount" id="amount-label">Net Amount</label>
+                  <br />
                   <input type="number" id="amount" />
+                  <br />
 
                   <label for="federal-withholdings"
                     >Federal Withholdings (%)</label
                   >
+                  <br />
                   <input type="number" id="federal-withholdings" />
+                  <br />
 
                   <label for="state-withholdings">State Withholdings (%)</label>
+                  <br />
                   <input type="number" id="state-withholdings" />
+                  <br />
 
                   <label for="fee">Fee</label>
+                  <br />
                   <input type="number" id="fee" />
+                  <br />
 
                   <button class="btn" type="button" id="distribution-reset">
                     Reset

@@ -21,7 +21,7 @@
         <div class="side"></div>
         <!--this is the div where the sidebar is imported--->
         <div class="main">
-          <div class="show">
+          <div class="show" id="main-screen">
             <div class="name">
               <h1>Credit Card Minimum Monthly Calculator</h1>
             </div>
@@ -30,15 +30,20 @@
                 <!--it is the input div,put all the input fields(inside form) here-->
                 <form id="ccm-calculator">
                   <label for="credit-card-balance">Credit card Balance</label>
+                  <br />
                   <input type="number" id="credit-card-balance" />
+                  <br />
 
                   <label for="interest-rate">Interest Rate (%)</label>
+                  <br />
                   <input type="number" id="interest-rate" />
+                  <br />
 
                   <p id="calculation-info">
                     Minimum payment is percentage of the balance or minimum
                     amount, whichever is higher.
                   </p>
+                  <br />
 
                   <label for="minimum-percentage-monthly"
                     >Minimum Percentage Monthly</label
@@ -55,16 +60,21 @@
                     <option value="4.5">4.5%</option>
                     <option value="5">5%</option>
                   </select>
+                  <br />
+
                   <label for="adding-interest">+ Interest</label>
                   <select id="adding-interest">
                     <option value="0">NO</option>
                     <option value="1">YES</option>
                   </select>
+                  <br />
 
                   <label for="minimum-amount-monthly"
                     >Minimum Amount Monthly</label
                   >
+                  <br />
                   <input type="number" id="minimum-amount-monthly" />
+                  <br />
 
                   <button class="btn" id="ccm-reset" type="button">
                     Reset

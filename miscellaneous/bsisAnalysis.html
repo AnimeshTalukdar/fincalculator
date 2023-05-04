@@ -22,7 +22,7 @@
         <div class="side"></div>
         <!--this is the div where the sidebar is imported--->
         <div class="main">
-          <div class="show">
+          <div class="show" id="main-screen">
             <div class="name">
               <h1>Balance Sheet and Income Statement Analysis</h1>
             </div>
@@ -30,235 +30,297 @@
               <div class="inp">
                 <!--it is the input div,put all the input fields(inside form) here-->
                 <form id="balance-sheet-analyzer">
-                  <label>Asset</label>
-                  <label>Current Assets</label>
+                  <h3>Current Assets</h3>
+                  <br />
 
                   <label for="cash">Cash</label>
+                  <br />
                   <input type="number" onchange="calc();" id="cash" />
+                  <br />
 
                   <label for="accounts-receivable">Acounts Receivable</label>
+                  <br />
                   <input
                     type="number"
                     onchange="calc();"
                     id="accounts-receivable"
                   />
+                  <br />
 
                   <label for="inventory">Inventory</label>
+                  <br />
                   <input type="number" onchange="calc();" id="inventory" />
+                  <br />
 
                   <label
                     for="total-current-assets"
                     class="auto-calculated-items"
                     >Total Current Assets</label
                   >
+                  <br />
                   <input
                     type="number"
                     onchange="calc();"
                     id="total-current-assets"
                     readonly
                   />
+                  <br />
 
-                  <label>Fixed Assets</label>
+                  <h3>Fixed Assets</h3>
+                  <br />
 
                   <label for="plant-property">Plant Property</label>
+                  <br />
                   <input type="number" onchange="calc();" id="plant-property" />
+                  <br />
 
                   <label for="less-accumulated-depreciation"
                     >Less Accumulated Deception</label
                   >
+                  <br />
                   <input
                     type="number"
                     onchange="calc();"
                     id="less-accumulated-depreciation"
                   />
+                  <br />
 
                   <label for="net-fixed-assets" class="auto-calculated-items"
                     >Net Fixed Assets</label
                   >
+                  <br />
                   <input
                     type="number"
                     onchange="calc();"
                     id="net-fixed-assets"
                     readonly
                   />
+                  <br />
 
                   <label for="total-assets" class="auto-calculated-items"
                     >Total Assets</label
                   >
+                  <br />
                   <input
                     type="number"
                     onchange="calc();"
                     id="total-assets"
                     readonly
                   />
+                  <br />
 
-                  <label>Liabilities and Equity</label>
-                  <label>Current Liabilities</label>
+                  <h3>Current Liabilities</h3>
+                  <br />
 
                   <label for="accounts-payable">Accounts Payable</label>
+                  <br />
                   <input
                     type="number"
                     onchange="calc();"
                     id="accounts-payable"
                   />
+                  <br />
 
                   <label for="notes-payable">Notes Payble</label>
+                  <br />
                   <input type="number" onchange="calc();" id="notes-payable" />
+                  <br />
 
                   <label
                     for="total-current-liabilities"
                     class="auto-calculated-items"
                     >Total Current Liabilities</label
                   >
+                  <br />
                   <input
                     type="number"
                     onchange="calc();"
                     id="total-current-liabilities"
                     readonly
                   />
+                  <br />
 
                   <label for="total-long-term-liabilities"
                     >Total Long-Term Liabilities</label
                   >
+                  <br />
                   <input
                     type="number"
                     onchange="calc();"
                     id="total-long-term-liabilities"
                   />
+                  <br />
 
-                  <label>Owners's Equality</label>
+                  <h3>Owners's Equality</h3>
+                  <br />
 
                   <label for="common-stock">Common Stock (₹1 par)</label>
+                  <br />
                   <input type="number" onchange="calc();" id="common-stock" />
+                  <br />
 
                   <label for="retained-earnings">Retained Earnings</label>
+                  <br />
                   <input
                     type="number"
                     onchange="calc();"
                     id="retained-earnings"
                   />
+                  <br />
 
                   <label for="accum-other-income">Accum Other Income</label>
+                  <br />
                   <input
                     type="number"
                     onchange="calc();"
                     id="accum-other-income"
                   />
+                  <br />
 
                   <label for="total-owners-equity" class="auto-calculated-items"
                     >Total Owners Equity</label
                   >
+                  <br />
                   <input
                     type="number"
                     onchange="calc();"
                     id="total-owners-equity"
                     readonly
                   />
+                  <br />
 
                   <label for="total-liabilities-and-equity"
                     >Total Liabilities and Owners Equity</label
                   >
+                  <br />
                   <input
                     type="number"
                     onchange="calc();"
                     id="total-liabilities-and-equity"
                     readonly
                   />
+                  <br />
 
-                  <label>Income Statement</label>
-
-                  <label>Income Statement</label>
+                  <h3>Income Statement</h3>
+                  <br />
 
                   <label for="sales">Sales</label>
+                  <br />
                   <input type="number" onchange="calc();" id="sales" />
+                  <br />
 
                   <label for="cost-of-goods">Cost of Goods Sold</label>
+                  <br />
                   <input type="number" onchange="calc();" id="cost-of-goods" />
+                  <br />
 
                   <label for="administrative-expenses"
                     >Administrative Expenses</label
                   >
+                  <br />
                   <input
                     type="number"
                     onchange="calc();"
                     id="administrative-expenses"
                   />
+                  <br />
 
                   <label for="depreciation">Depreciation</label>
+                  <br />
                   <input type="number" onchange="calc();" id="depreciation" />
+                  <br />
 
                   <label
                     for="earnings-before-interest-and-taxes"
                     class="auto-calculated-items"
                     >Earnings Before Interest and Taxes</label
                   >
+                  <br />
                   <input
                     type="number"
                     onchange="calc();"
                     id="earnings-before-interest-and-taxes"
                     readonly
                   />
+                  <br />
 
                   <label for="interest-expense">Interest Expense</label>
+                  <br />
                   <input
                     type="number"
                     onchange="calc();"
                     id="interest-expense"
                   />
+                  <br />
 
                   <label for="taxable-income" class="auto-calculated-items"
                     >Taxable Income</label
                   >
+                  <br />
                   <input
                     type="number"
                     onchange="calc();"
                     id="taxable-income"
                     readonly
                   />
+                  <br />
 
                   <label for="taxes">Taxes</label>
+                  <br />
                   <input type="number" onchange="calc();" id="taxes" />
+                  <br />
 
                   <label for="net-income" class="auto-calculated-items"
                     >Net Income</label
                   >
+                  <br />
                   <input
                     type="number"
                     onchange="calc();"
                     id="net-income"
                     readonly
                   />
+                  <br />
 
                   <label for="dividends">Dividends</label>
+                  <br />
                   <input type="number" onchange="calc();" id="dividends" />
+                  <br />
 
                   <label
                     for="addition-to-retained-earnings"
                     class="auto-calculated-items"
                     >Addition to Retained Earnings</label
                   >
+                  <br />
                   <input
                     type="number"
                     onchange="calc();"
                     id="addition-to-retained-earnings"
                     readonly
                   />
+                  <br />
 
-                  <label>Other Information</label>
+                  <h3>Other Information</h3>
+                  <br />
 
                   <label for="shares-outstanding">Shares Outstanding</label>
+                  <br />
                   <input
                     type="number"
                     onchange="calc();"
                     id="shares-outstanding"
                   />
+                  <br />
 
                   <label for="price-per-share">Price Per Share</label>
+                  <br />
                   <input
                     type="number"
                     onchange="calc();"
                     id="price-per-share"
                   />
+                  <br />
 
                   <button class="btn" type="button" id="balance-sheet-reset">
                     Reset

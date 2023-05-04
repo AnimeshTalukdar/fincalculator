@@ -21,7 +21,7 @@
         <div class="side"></div>
         <!--this is the div where the sidebar is imported--->
         <div class="main">
-          <div class="show">
+          <div class="show" id="main-screen">
             <div class="name">
               <h1>Rule of 72 Calculator</h1>
             </div>
@@ -30,11 +30,14 @@
                 <!--it is the input div,put all the input fields(inside form) here-->
                 <form id="rule-72-calculator">
                   <h3>Calculate Years Required for Principal to Double</h3>
+                  <br />
 
                   <label for="annual-interest-rate"
                     >Annual Interest Rate (%)</label
                   >
+                  <br />
                   <input id="annual-interest-rate" type="number" />
+                  <br />
 
                   <button class="btn" id="ptd-calculate" type="button">
                     Calculate
@@ -46,11 +49,14 @@
                     Calculate Annual Interest Rate Required for Principal to
                     Double
                   </h3>
+                  <br />
 
                   <label for="years-to-double"
                     >Years to Double Investment</label
                   >
+                  <br />
                   <input id="years-to-double" type="number" />
+                  <br />
 
                   <button class="btn" id="ir-calculate" type="button">
                     Calculate

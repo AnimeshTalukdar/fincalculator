@@ -21,7 +21,7 @@
         <div class="side"></div>
         <!--this is the div where the sidebar is imported--->
         <div class="main">
-          <div class="show">
+          <div class="show" id="main-screen">
             <div class="name">
               <h1>Loan Calculator</h1>
             </div>
@@ -30,16 +30,26 @@
                 <!--it is the input div,put all the input fields(inside form) here-->
                 <form id="loan-calculator">
                   <label for="loan-amount">Principal Loan Amount</label>
+                  <br />
                   <input type="number" id="loan-amount" />
+                  <br />
 
                   <label for="interest-rate">Annual Interest Rate (%)</label>
+                  <br />
                   <input type="number" id="interest-rate" />
+                  <br />
 
                   <label for="loan-term">Loan Term (in months)</label>
+                  <br />
                   <input type="number" id="loan-term" />
+                  <br />
 
-                  <button class="btn" id="loan-reset" type="button">Reset</button>
-                  <button class="btn" id="loan-calculate" type="button">Calculate</button>
+                  <button class="btn" id="loan-reset" type="button">
+                    Reset
+                  </button>
+                  <button class="btn" id="loan-calculate" type="button">
+                    Calculate
+                  </button>
                 </form>
               </div>
             </div>

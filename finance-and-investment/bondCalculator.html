@@ -21,7 +21,7 @@
         <div class="side"></div>
         <!--this is the div where the sidebar is imported--->
         <div class="main">
-          <div class="show">
+          <div class="show" id="main-screen">
             <div class="name">
               <h1>Bond Calculator</h1>
             </div>
@@ -30,16 +30,24 @@
                 <!--it is the input div,put all the input fields(inside form) here-->
                 <form id="bond-calculator">
                   <label for="current-price">Current Price</label>
+                  <br />
                   <input type="number" id="current-price" />
+                  <br />
 
                   <label for="face-value">Face Value</label>
+                  <br />
                   <input type="number" id="face-value" />
+                  <br />
 
                   <label for="coupon-rate">Annual Coupon Rate(%)</label>
+                  <br />
                   <input type="number" id="coupon-rate" />
+                  <br />
 
                   <label for="years-to-maturity">Years to Maturity</label>
+                  <br />
                   <input type="number" id="years-to-maturity" />
+                  <br />
 
                   <label for="compounding">Compounding</label>
                   <select id="compounding">
@@ -48,6 +56,7 @@
                     </option>
                     <option value="Annually">Annually</option>
                   </select>
+                  <br />
 
                   <button class="btn" id="bond-reset" type="button">
                     Reset
