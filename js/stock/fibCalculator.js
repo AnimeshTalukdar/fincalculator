@@ -72,6 +72,30 @@ function calc() {
     table4.innerHTML = "";
 
 
+    table1.setAttribute("border","0");
+    table1.setAttribute("cellspacing","10");
+
+    table1.setAttribute("cellpadding","5");
+    table1.setAttribute("style","font-size: 12px");
+
+
+    table2.setAttribute("border","0");
+    table2.setAttribute("cellspacing","10");
+    table2.setAttribute("cellpadding","5");
+    table2.setAttribute("style","font-size: 12px");
+
+    table3.setAttribute("border","0");
+    table3.setAttribute("cellspacing","10");
+    table3.setAttribute("cellpadding","5");
+    table3.setAttribute("style","font-size: 12px");
+
+    table4.setAttribute("border","0");
+    table4.setAttribute("cellspacing","10");
+    table4.setAttribute("cellpadding","5");
+    table4.setAttribute("style","font-size: 12px");
+
+
+
     for (let i = 0; i < mUptrendRetracement.length; i++) {
         let str = mUptrendRetracement[i];
         str = str.replace("%", "");
@@ -85,7 +109,7 @@ function calc() {
         let cell1 = row.insertCell(0);
         let cell2 = row.insertCell(1);
 
-        if (i % 2 == 0) row.style.backgroundColor = '#FCF6CF';
+        // if (i % 2 == 0) row.style.backgroundColor = '#FCF6CF';
 
         cell2.style.textAlign = 'right';
 
@@ -108,7 +132,7 @@ function calc() {
         let cell1 = row.insertCell(0);
         let cell2 = row.insertCell(1);
 
-        if (i % 2 == 0) row.style.backgroundColor = '#FCF6CF';
+        // if (i % 2 == 0) row.style.backgroundColor = '#FCF6CF';
 
         cell2.style.textAlign = 'right';
 
@@ -132,7 +156,7 @@ function calc() {
         let cell1 = row.insertCell(0);
         let cell2 = row.insertCell(1);
 
-        if (i % 2 == 0) row.style.backgroundColor = '#FCF6CF';
+        // if (i % 2 == 0) row.style.backgroundColor = '#FCF6CF';
 
         cell2.style.textAlign = 'right';
 
@@ -156,7 +180,7 @@ function calc() {
         let cell1 = row.insertCell(0);
         let cell2 = row.insertCell(1);
 
-        if (i % 2 == 0) row.style.backgroundColor = '#FCF6CF';
+        // if (i % 2 == 0) row.style.backgroundColor = '#FCF6CF';
 
         cell2.style.textAlign = 'right';
 
@@ -165,6 +189,80 @@ function calc() {
         cell2.innerHTML = value.toFixed(4);
 
     }
+    // table 1 name = Uptrend Retracements
+    // table 2 name = Uptrend Extensions
+    // table 3 name = Downtrend Retracements
+    // table 4 name = Downtrend Extensions
+
+    // set table names
+    let row = table1.insertRow(0);
+    let cell1 = row.insertCell(0);
+    let cell2 = row.insertCell(1);
+    cell1.innerHTML = "Uptrend Retracements";
+
+    row = table2.insertRow(0);
+    cell1 = row.insertCell(0);
+    cell2 = row.insertCell(1);
+    cell1.innerHTML = "Uptrend Extensions";
+
+    row = table3.insertRow(0);
+    cell1 = row.insertCell(0);
+    cell2 = row.insertCell(1);
+    cell1.innerHTML = "Downtrend Retracements";
+
+    row = table4.insertRow(0);
+    cell1 = row.insertCell(0);
+    cell2 = row.insertCell(1);
+    cell1.innerHTML = "Downtrend Extensions";
+
+
+    // set table headers
+
+    row = table1.insertRow(1);
+    cell1 = row.insertCell(0);
+    cell2 = row.insertCell(1);
+    cell1.innerHTML = "Percentage";
+    cell2.innerHTML = "Value";
+    row = table2.insertRow(1);
+    cell1 = row.insertCell(0);
+    cell2 = row.insertCell(1);
+    cell1.innerHTML = "Percentage";
+    cell2.innerHTML = "Value";
+    row = table3.insertRow(1);
+    cell1 = row.insertCell(0);
+    cell2 = row.insertCell(1);
+    cell1.innerHTML = "Percentage";
+    cell2.innerHTML = "Value";
+    row = table4.insertRow(1);
+    cell1 = row.insertCell(0);
+    cell2 = row.insertCell(1);
+    cell1.innerHTML = "Percentage";
+    cell2.innerHTML = "Value";
+
+
+    let table1_width = table1.offsetWidth;
+    let table2_width = table2.offsetWidth;
+    let table3_width = table3.offsetWidth;
+    let table4_width = table4.offsetWidth;
+
+    let table1_height = table1.offsetHeight;
+    let table2_height = table2.offsetHeight;
+    let table3_height = table3.offsetHeight;
+    let table4_height = table4.offsetHeight;
+
+    table1.style.width = table2_width;
+    table2.style.width = table3_width;
+    table3.style.width = table4_width;
+    table4.style.width = table1_width;
+
+    table1.style.height = table2_height;
+    table2.style.height = table3_height;
+    table3.style.height = table4_height;
+    table4.style.height = table1_height;
+
+    table1.style.float = "left";
+    table2.style.float = "left";
+    table3.style.float = "left";
 
 
 }

@@ -19,6 +19,12 @@ function calc() {
     let table = document.getElementById("resultTable");
     table.innerHTML = "";
 
+    table.setAttribute("border","0");
+    table.setAttribute("cellspacing","10");
+
+    table.setAttribute("cellpadding","5");
+    table.setAttribute("style","font-size: 12px");
+
     let header = table.createTHead();
     let row = header.insertRow(0);
     let c1 = row.insertCell(0);
@@ -61,7 +67,7 @@ function calc() {
         let cell6 = row.insertCell(5);
         let cell7 = row.insertCell(6);
 
-        if (j % 2 == 0) row.style.backgroundColor = '#FCF6CF';
+        // if (j % 2 == 0) row.style.backgroundColor = '#FCF6CF';
 
         cell2.style.textAlign = 'right';
         cell3.style.textAlign = 'right';
