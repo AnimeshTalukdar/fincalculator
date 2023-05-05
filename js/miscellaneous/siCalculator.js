@@ -31,6 +31,20 @@
 
     let table = document.getElementById("resultTable");
     table.innerHTML = "";
+    // set table style
+    //               border="0"
+    //               cellspacing="10"
+    //               cellpadding="5"
+    //               style="font-size: 12px"
+
+
+    table.setAttribute("border","0");
+    table.setAttribute("cellspacing","10");
+
+    table.setAttribute("cellpadding","5");
+    table.setAttribute("style","font-size: 12px");
+    // table.setAttribute("hidden","true");
+
 
     let header = table.createTHead();
     let row = header.insertRow(0);
@@ -77,7 +91,7 @@
         let cell7 = row.insertCell(6);
         let cell8 = row.insertCell(7);
 
-        if(j%2 == 0) row.style.backgroundColor = '#FCF6CF';
+        // if(j%2 == 0) row.style.backgroundColor = '#FCF6CF';
 
         cell2.style.textAlign = 'right';
         cell3.style.textAlign = 'right';
