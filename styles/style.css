@@ -458,7 +458,7 @@ nav ul li a span.rotate {
     width: 80vw;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .sidebar {
     width: 100%;
     left: -100%;
