@@ -18,7 +18,7 @@
         <h1>NAV BAR</h1>
       </div>
       <div class="wrapper">
-        <div class="side"></div>
+        <div id="sidebar"></div>
         <!--this is the div where the sidebar is imported--->
         <div class="main">
           <div class="show" id="main-screen">
@@ -89,8 +89,8 @@
       </div>
     </div>
 
+    <script src="../sidebar.js"></script>
     <script>
-      $(".side").load("../sidebar.html", function () {
         // jQuery code here
         $(".btnn").click(function () {
           $(this).toggleClass("click");
@@ -105,7 +105,6 @@
         $("nav ul li").click(function () {
           $(this).addClass("active").siblings().removeClass("active");
         });
-      });
     </script>
 
     <script src="../js/stock/wacocCalculator.js"></script>
