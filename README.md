@@ -1,2 +1,2 @@
 # fincalculator
-Link to the website: https://roytanmay.github.io/fincalculator/
+Link to the website: https://animeshtalukdar.github.io/fincalculator/
